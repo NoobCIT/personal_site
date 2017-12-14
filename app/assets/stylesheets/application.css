@@ -15,4 +15,17 @@
  *= require_self
  */
 
- @import 'cleanblog/scss/clean-blog'
+ @import 'cleanblog/font-awesome/scss/font-awesome';
+ @import 'cleanblog/scss/clean-blog';
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+/*
+ @import 'cleanblog/clean-blog.js';
+ @import 'cleanblog/contact_me.js';
+ @import 'jqBootstrapValidation.js';
+*/
+ @import 'cleanblog/bootstrap/css/bootstrap-grid';
+ @import 'cleanblog/bootstrap/css/bootstrap-reboot';
+ @import 'cleanblog/bootstrap/css/bootstrap';
+/*
+ @import 'cleanblog/bootstrap/js/bootstrap.bundle.js';
