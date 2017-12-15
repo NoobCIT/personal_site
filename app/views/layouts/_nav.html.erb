@@ -21,7 +21,13 @@
           <a class="nav-link"><%= link_to "Archive", '#' %></a>
         </li>
         <li class = "nav-item">
-          <a class="nav-link"><%= link_to "Sign In", '#' %></a>
+          <a class="nav-link">
+            <% if logged_in? %>
+              <%= link_to "logout", logout_path, method: :delete %>
+            <% else %>
+              <%= link_to "login", login_path %>
+            <% end %>
+          </a>
         </li>
       </ul>
     </div>
