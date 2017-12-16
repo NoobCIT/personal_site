@@ -23,7 +23,7 @@
         <li class = "nav-item">
           <a class="nav-link">
             <% if logged_in? %>
-              <%= link_to "logout", logout_path, method: :delete %>
+              <%= link_to "Profile", user_path(current_user) %>
             <% else %>
               <%= link_to "login", login_path %>
             <% end %>

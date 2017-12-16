@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.order('created_at DESC').page(params[:page]).per_page(5)
+    @user = current_user
   end
 
   def show
@@ -15,10 +16,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
-    @article.save
-    flash[:success] = "You successfully created the article!"
-    redirect_to article_path(@article)
+    @article = current_user.articles.build(article_params)
+    if @article.save
+      flash[:success] = "You successfully created the article!"
+      redirect_to article_path(@article)
+    else
+      render 'new'
+    end
   end
 
   def destroy
