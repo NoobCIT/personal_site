@@ -13,3 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+//= require jquery.js
+//= require bootstrap.bundle.js
+//= require clean-blog.js
