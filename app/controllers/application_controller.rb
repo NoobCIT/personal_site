@@ -4,4 +4,5 @@ class ApplicationController < ActionController::Base
   include CommentsHelper
   include UsersHelper
   include SessionsHelper
+  include StaticPagesHelper
 end
