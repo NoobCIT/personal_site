@@ -44,6 +44,9 @@ gem 'paperclip'
 # Provides APIs to help with coding
 gem 'aws-sdk'
 
+# Provides markup capabilities
+gem 'redcarpet'
+
 # Install bootstrap
 gem 'bootstrap-sass'
 
