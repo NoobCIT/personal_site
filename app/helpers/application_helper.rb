@@ -10,4 +10,10 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
+
+  def markdown(content)
+    options = { hard_wrap: true, filter_html: true, autolink: true, no_intra_emphasis: true, fenced_code_blocks: true }
+    @markdown ||=  Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+    @markdown.render(content)
+  end
 end
