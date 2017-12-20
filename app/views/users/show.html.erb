@@ -11,14 +11,15 @@
             <%= link_to article.title, article_path(article) %>
           </h4>
         </a>
-        <p class="post-meta">Posted <%= article.created_at.strftime('%B %d, %Y') %></p>
+        <p class="post-meta">Posted <%= article.created_at.strftime('%B %d, %Y') %> </p>
       </div>
       <% end %>
 
       <hr>
       <!-- Pager -->
       <div class="clearfix">
-        <%= link_to "Create a New Article", new_article_path, class: 'new_article' %><br />
+        <%= link_to 'Create a New Page', new_static_page_path %><br />
+        <%= link_to 'Create a New Article', new_article_path, class: 'new_article' %><br />
         <%= link_to 'Logout', logout_path, method: :delete %>
       </div>
     </div>
