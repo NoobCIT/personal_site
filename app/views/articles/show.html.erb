@@ -35,9 +35,6 @@
                   method: :delete,
                   data: {confirm: "Are you sure you want to delete this article?"} %>
             <% end %>
-            <h3>Comments (<%= @article.comments.size %>)</h3>
-            <%= render partial: 'articles/comment', collection: @article.comments %>
-            <%= render partial: 'comments/form' %>
           </div>
         </div>
       </div>
