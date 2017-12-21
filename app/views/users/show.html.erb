@@ -3,18 +3,29 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <h3>Articles (<%= @user.articles.count %>)</h3>
-      <% @user.articles.each do |article| %>
+      <h1>Articles (<%= @user.articles.count %>)</h1>
+      <% @user.articles.reverse.each do |article| %>
       <div class="post-preview">
         <a href="post.html">
-          <h4 class="post-title">
+          <h4 class="post-title archive-inline">
             <%= link_to article.title, article_path(article) %>
           </h4>
         </a>
-        <p class="post-meta">Posted <%= article.created_at.strftime('%B %d, %Y') %> </p>
-      </div>
+        <p class="post-meta archive-inline">Posted <%= article.created_at.strftime('%B %d, %Y') %> </p>
+        <p class="archive-inline"><%= link_to 'Edit', edit_article_path(article) %></p><p class="archive-inline"> </p><p class="archive-inline"><%= link_to 'Delete', article_path(article), method: :delete %></p>
       <% end %>
-
+    </div><br />
+      <h1>Tags (<%= Tag.all.count %>)</h1>
+      <% Tag.all.each do |tag| %>
+      <div class="post-preview">
+        <a href="post.html">
+          <h4 class="post-title archive-inline">
+            <%= link_to tag.name, tag_path(tag) %>
+          </h4>
+        </a>
+        <p class="archive-inline"><%= link_to 'Delete', tag_path(tag), method: :delete %></p>
+        <% end %>
+      </div><br />
       <hr>
       <!-- Pager -->
       <div class="clearfix">

@@ -12,7 +12,7 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @tag.destroy
     flash[:success] = "Your tag was successfully deleted!"
-    redirect_to tags_path
+    redirect_to root_path
   end
 
 end
