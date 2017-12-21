@@ -47,6 +47,9 @@ gem 'aws-sdk'
 # Provides markup capabilities
 gem 'redcarpet'
 
+# Provides highlighting syntax capabilities
+gem 'rouge'
+
 # Install bootstrap
 gem 'bootstrap-sass'
 
