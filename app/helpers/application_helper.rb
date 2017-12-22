@@ -1,15 +1,15 @@
 module ApplicationHelper
 
-    def bootstrap_class_for(flash_type)
-      case flash_type.to_sym
-        when :success
-          "alert-success"
-        when :error
-          "alert-error"
-        else
-          flash_type.to_s
-      end
+  def bootstrap_class_for(flash_type)
+    case flash_type.to_sym
+      when :success
+        "alert-success"
+      when :error
+        "alert-error"
+      else
+        flash_type.to_s
     end
+  end
 
   def markdown(text)
     options = { hard_wrap: true,

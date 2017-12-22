@@ -1,37 +1,29 @@
 <%= render 'layouts/header' %>
-<!-- Main Content -->
+
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <div class="post-preview">
-        <a href="post.html">
-          <h2 class="post-title">
-          </h2>
-          <h3 class="post-subtitle">
-          </h3>
-        </a>
-        <p class="post-meta">Posted by
-          <%= form_for(:session, url: login_path) do |f| %>
-
-            <%= f.label :email %>
-            <%= f.email_field :email %>
-
-            <%= f.label :password %>
-            <%= f.password_field :password %>
-
+      <form>
+        <%= form_for(:session, url: login_path) do |f| %>
+          <div class="form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, class: 'col-12 input-font-size' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, class: 'col-12 input-font-size' %>
+          </div>
+          <div class="form-group">
             <%= f.label :remember_me do %>
               <%= f.check_box :remember_me %>
               <span>Remember me on this computer</span>
             <% end %>
-
+          </div>
+          <div>
             <%= f.submit 'Login' %>
-
-          <% end %>
-        </p>
-      </div>
-      <hr>
+          </div>
+        <% end %>
+      </form>
     </div>
   </div>
 </div>
-
-<hr>
