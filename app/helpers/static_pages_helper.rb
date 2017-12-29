@@ -3,6 +3,6 @@ module StaticPagesHelper
   private
 
     def static_page_params
-      params.require(:static_page).permit(:name, :permalink, :content)
+      params.require(:static_page).permit(:name, :permalink, :content, :image)
     end
 end

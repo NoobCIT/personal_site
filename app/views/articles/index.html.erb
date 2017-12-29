@@ -1,31 +1,33 @@
-<%= render 'layouts/header' %>
-<!-- Main Content -->
+<header class="masthead" style="background-image: url('/assets/homepage.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <% @articles.each do |article| %>
       <div class="post-preview">
-        <a href="post.html">
+        <% @articles.each do |article| %>
           <h2 class="post-title">
             <%= link_to article.title, article_path(article) %>
           </h2>
           <h3 class="post-subtitle">
             <%= article.subtitle %>
           </h3>
-        </a>
-        <p class="post-meta">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
-      <% end %>
+          <p class="post-meta">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
+          <hr>
+        <% end %>
       </div>
-      <%# end %>
-
-      <hr>
-
-      <!-- Pager -->
       <div class="clearfix">
         <%= will_paginate %>
       </div>
     </div>
   </div>
 </div>
-
 <hr>

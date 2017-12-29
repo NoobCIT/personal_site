@@ -1,7 +1,34 @@
-<h1>Articles Tagged with <%= @tag.name %></h1>
-
-<ul>
-  <% @tag.articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
-  <% end %>
-</ul>
+<header class="masthead" style="background-image: url('/assets/homepage.jpg')">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1><%= @tag.name %></h1>
+            <span class="subheading">Articles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% @tag.articles.reverse.each do |article| %>
+        <div class="post-preview">
+          <h2 class="post-title">
+            <%= link_to article.title, article_path(article) %>
+          </h2>
+          <h3 class="post-subtitle">
+            <%= article.subtitle %>
+          </h3>
+          <p class="post-meta">
+            Posted on <%= article.created_at.strftime("%B %d, %Y") %>
+          </p>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
+<hr>
