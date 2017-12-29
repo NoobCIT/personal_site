@@ -1,16 +1,24 @@
-<h1>Create a New Page </h1>
+<%= render 'layouts/header' %>
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-8 col-md-10 mx-auto">
+       <%= form_for(@static_page, html: { multipart: true }) do |f| %>
 
-<%= form_for(@static_page) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'col-12 input-font-size' %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+        <%= f.label :permalink %>
+        <%= f.text_field :permalink, class: 'col-12 input-font-size' %>
 
-  <%= f.label :permalink %>
-  <%= f.text_field :permalink %>
+        <%= f.label :content %>
+        <%= f.text_area :content, class: 'col-12 input-font-size' %>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+        <%= f.label :image, "Attach Header Image" %><br />
+        <%= f.file_field :image %><br /><br />
 
-  <%= f.submit 'Create Page' %>
+        <%= f.submit 'Create Page' %>
 
-<% end %>
+       <% end %>
+     </div>
+   </div>
+ </div>

@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
       flash[:success] = "You have successfully logged in!"
       redirect_to user_path(user)
     else
-      flash.now[:unsuccessful] = "You failed to login"
       render 'new'
     end
   end

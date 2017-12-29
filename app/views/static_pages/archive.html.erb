@@ -1,37 +1,41 @@
-<%= render 'layouts/header' %>
-<!-- Main Content -->
+<header class="masthead" style="background-image: url('/assets/archive.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Archive</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
       <h1>Articles</h1>
       <% Article.all.reverse.each do |article| %>
-      <div class="post-preview">
-        <a href="post.html">
-          <h2 class="post-title archive-inline">
-            <%= link_to article.title, article_path(article) %>
-          </h2>
-        </a>
-        <p class="post-meta archive-inline">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title archive-inline">
+              <%= link_to article.title, article_path(article) %>
+            </h2>
+          </a>
+          <p class="post-meta archive-inline">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
+        </div>
       <% end %>
-    </div><br />
+      <hr>
       <h1>Tags</h1>
       <% Tag.all.each do |tag| %>
-      <div class="post-preview">
-        <a href="post.html">
-          <h2 class="post-title archive-inline">
-            <%= link_to tag.name, tag_path(tag) %>
-          </h2>
-        </a>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title archive-inline">
+              <%= link_to tag.name, tag_path(tag) %>
+            </h2>
+          </a>
+        </div>
       <% end %>
-    </div><br />
-
-
-      <hr>
-
-      <!-- Pager -->
-
     </div>
   </div>
 </div>
-
 <hr>

@@ -1,37 +1,34 @@
-<%= render 'layouts/header' %>
-<!-- Main Content -->
+<header class="masthead" style="background-image: url('/assets/login.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <div class="post-preview">
-        <a href="post.html">
-          <h2 class="post-title">
-          </h2>
-          <h3 class="post-subtitle">
-          </h3>
-        </a>
-        <p class="post-meta">Posted by
-          <%= form_for(:session, url: login_path) do |f| %>
+      <%= form_for(:session, url: login_path) do |f| %>
 
-            <%= f.label :email %>
-            <%= f.email_field :email %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'col-12 input-font-size' %><br />
 
-            <%= f.label :password %>
-            <%= f.password_field :password %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'col-12 input-font-size' %><br />
 
-            <%= f.label :remember_me do %>
-              <%= f.check_box :remember_me %>
-              <span>Remember me on this computer</span>
-            <% end %>
+        <%= f.label :remember_me do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+        <% end %><br />
 
-            <%= f.submit 'Login' %>
+        <%= f.submit 'Login' %>
 
-          <% end %>
-        </p>
-      </div>
-      <hr>
+      <% end %>
     </div>
   </div>
 </div>
-
 <hr>
