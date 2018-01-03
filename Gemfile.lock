@@ -209,7 +209,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk-v1 (< 2.0)
+  aws-sdk-v1
   bcrypt
   bootstrap-sass
   bootstrap-will_paginate
