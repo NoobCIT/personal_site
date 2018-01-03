@@ -39,10 +39,10 @@ gem 'bootstrap-will_paginate'
 # gem 'capistrano-rails', group: :development
 
 # File attachment library for ActiveRecord
-gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'paperclip'
 
 # Provides APIs to help with coding
-gem 'aws-sdk', '>= 2.0.0'
+gem 'aws-sdk'
 
 # Provides markup capabilities
 gem 'redcarpet'
