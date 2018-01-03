@@ -15,7 +15,6 @@
  *= require_self
  */
 
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
+
  @import 'css/bootstrap.css';
  @import 'scss/clean-blog.scss';
