@@ -55,8 +55,6 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.2.3)
       execjs
-    aws-sdk (1.67.0)
-      aws-sdk-v1 (= 1.67.0)
     aws-sdk-v1 (1.67.0)
       json (~> 1.4)
       nokogiri (~> 1)
@@ -211,7 +209,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (< 2.0)
+  aws-sdk-v1 (< 2.0)
   bcrypt
   bootstrap-sass
   bootstrap-will_paginate
