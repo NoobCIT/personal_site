@@ -40,7 +40,7 @@ gem 'bootstrap-will_paginate'
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 
 # Provides APIs to help with coding
-gem 'aws-sdk-v1'
+gem 'aws-sdk'
 
 # Provides markup capabilities
 gem 'redcarpet'
