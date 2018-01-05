@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <h1>Articles (<%= @user.articles.count %>)</h1>
+      <h2>Articles (<%= @user.articles.count %>)</h2>
         <% @user.articles.reverse.each do |article| %>
           <div class="post-preview">
             <a href="post.html">
@@ -26,7 +26,7 @@
           </div>
         <% end %>
         <hr>
-      <h1>Tags (<%= Tag.all.count %>)</h1>
+      <h2>Tags (<%= Tag.all.count %>)</h2>
       <% Tag.all.each do |tag| %>
         <div class="post-preview">
           <a href="post.html">
