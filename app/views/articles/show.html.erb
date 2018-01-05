@@ -1,7 +1,4 @@
-<header class="masthead" style="background-image: url('
-  <% if @article.image.exists? %>
-    <%= image_tag @article.image.url %>
-  <% end %>')">
+<header class="masthead" style="background-image: url('<%= @article.image.url %>')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
