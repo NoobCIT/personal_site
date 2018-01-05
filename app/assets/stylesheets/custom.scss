@@ -24,6 +24,8 @@ h3.post-subtitle {
   }
 }
 
+/** Tag Styling **/
+
 .tags {
   font-size: 14px;
   font-family: Helvetica, Arial, sans-serif;
@@ -38,9 +40,20 @@ h3.post-subtitle {
   margin: 0 10px 0 0;
 }
 
+/** Styling for blog post images **/
 
+img[alt=blog-image] {
+  max-width: 100%;
+  display:block;
+  margin: 0 auto;
+  height: auto;
+}
 
+/** Styling for blog post content **/
 
+p {
+  text-align: justify;
+}
 
 
 // Styling for the masthead
