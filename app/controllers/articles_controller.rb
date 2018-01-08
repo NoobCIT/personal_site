@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit, :create, :destroy, :update]
 
   def index
     @articles = Article.order('created_at DESC').page(params[:page]).per_page(5)
@@ -42,6 +43,4 @@ class ArticlesController < ApplicationController
     flash[:success] = "Your article was successfully updated!"
     redirect_to article_path(@article)
   end
-
-
 end
