@@ -29,16 +29,6 @@ ActiveRecord::Schema.define(version: 20171224052146) do
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.string "author_name"
-    t.text "body"
-    t.bigint "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email"
-    t.index ["article_id"], name: "index_comments_on_article_id"
-  end
-
   create_table "static_pages", force: :cascade do |t|
     t.string "name"
     t.string "permalink"
@@ -76,7 +66,6 @@ ActiveRecord::Schema.define(version: 20171224052146) do
   end
 
   add_foreign_key "articles", "users"
-  add_foreign_key "comments", "articles"
   add_foreign_key "taggings", "articles"
   add_foreign_key "taggings", "tags"
 end
