@@ -17,11 +17,11 @@
       <% Article.all.reverse.each do |article| %>
         <div class="post-preview">
           <a href="post.html">
-            <h2 class="post-title archive-inline">
+            <h2 class="post-title archive">
               <%= link_to article.title, article_path(article) %>
             </h2>
           </a>
-          <p class="post-meta archive-inline">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
+          <p class="post-meta archive archive-date">Posted on <%= article.created_at.strftime("%B %d, %Y") %></p>
         </div>
       <% end %>
       <hr>
@@ -29,7 +29,7 @@
       <% Tag.all.each do |tag| %>
         <div class="post-preview">
           <a href="post.html">
-            <h2 class="post-title archive-inline">
+            <h2 class="post-title archive">
               <%= link_to tag.name, tag_path(tag) %>
             </h2>
           </a>

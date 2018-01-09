@@ -6,13 +6,18 @@ h3.post-subtitle {
   font-weight: normal;
 }
 
-.archive-inline {
+.archive {
   display: inline;
   font-size: 20px;
 }
 
 .input-font-size {
   font-size: 14px;
+}
+
+.archive-date {
+  position: absolute;
+  right: 0;
 }
 
 /** forms **/
